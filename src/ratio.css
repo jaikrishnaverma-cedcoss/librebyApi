@@ -1,0 +1,139 @@
+.main1{
+min-height: 60vh;
+width: 98%;
+}
+.icons{
+    width: 15vw;
+}
+.ccl{
+    color: white;
+    background-color: rgba(252, 5, 5, 0.7);
+    padding-top: 10px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+}
+.main1Upper{
+    padding: 10px 20px
+}
+.main1Upper i{
+    font-size: 1.5rem;
+}
+.city{
+    font-weight: 900;
+    font-size: 35px;
+}
+.state{
+    font-weight: 400;
+    font-size: 18px;
+}
+.country{
+    font-weight: 300;
+    font-size: 16px;
+}
+.h1{
+font-size: 2rem;
+}
+.h2{
+    font-size: 5rem;
+}
+.searchbox {
+    min-width: 270px;
+    margin-bottom: 12px;
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+.main1{
+    box-shadow: rgba(46, 127, 240, 0.4) 0px 5px, rgba(46, 156, 240, 0.3) 0px 10px, rgba(46, 137, 240, 0.2) 0px 15px, rgba(46, 156, 240, 0.1) 0px 20px, rgba(46, 146, 240, 0.05) 0px 25px;
+
+}
+.footbox div{
+    background-color: rgba(255, 255, 255, 0.207);    
+    border-radius: 25px;
+    padding: 2%;
+    margin: 20px;
+}
+.Sunny{
+    background:url('../public/field-gedbbf26bc_1920.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.Clear{
+    background: url('../public/ss.jpg');
+    background-size: cover;
+}
+.drizzle,.rain
+{
+    background: url('../public/as.jpg');
+}
+.Mist
+{
+    background: url('../public/Mist.jpg');
+    background-size: cover;
+}
+.cloudy,.Cloudy{
+    background: url('../public/brickwork-covers-top.jpg');
+    background-position: bottom;
+    background-size: cover;
+}
+.Overcast{
+    background: url('../public/clouds-g58336bec8_640.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.bookImg{
+height:180px;
+width: 100%;
+/* max-width: 150px; */
+border-radius: 20px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+.box{
+    flex-direction: column;
+}
+.box div{
+    width: 80%;
+}
+.city{
+    font-weight: 900;
+    font-size: 20px;
+}
+.state{
+    font-weight: 400;
+    font-size: 15px;
+}
+.country{
+    font-weight: 300;
+    font-size: 12px;
+}
+.main1Upper{
+    width: 90%;
+}
+.h2{
+    font-size: 2.6rem;
+}
+.footbox{
+    flex-direction: column;
+    align-items: center;
+}
+.footbox div{
+    width: 95%;
+    align-items: center;
+}
+.footbox div table{
+    width: 95%;
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .footbox div table{
+        width: 90%;
+    }
+    .h2{
+        font-size: 3rem;
+    }
+}
