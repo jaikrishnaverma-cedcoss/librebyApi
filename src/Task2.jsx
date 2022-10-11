@@ -27,7 +27,7 @@ const Task2 = (props) => {
   }
   let books=Devider(props.docs,4);
 
-    
+
   console.log("b",books)
   return (
     <>

@@ -22,8 +22,9 @@ const Task1 = () => {
   }
     , [])
   const fetchData = (e) => {
-    e.preventDefault()
-    let rl = 'https://api.weatherapi.com/v1/current.json?key=0bab7dd1bacc418689b143833220304&q=$location=' + e.target.city.value;
+    e.preventDefault()  
+    // https://openlibrary.org/search.json?q=Alphakids&mode=ebooks&has_fulltext=true
+    let rl = 'https://openlibrary.org/search.json?q='+e.target.city.value+'&mode=ebooks&has_fulltext=true';
     fetch(rl)
       .then((res) => res.json())
       .then((json) => {
@@ -35,13 +36,21 @@ const Task1 = () => {
   }
   const BookPages=(data)=>
   {
-setState({...state,currentBook:data})
+    let urls='https://openlibrary.org/api/books?bibkeys=ISBN:'+data.isbn[0]+'&jscmd=details&format=json';
+    fetch(urls)
+    .then((res)=>res.json())
+    .then((json)=>{
+      let x='ISBN:'+data.isbn[0];
+      window.location.href=json[x].info_url
+      console.log(json[x])
+    })
+// setState({...state,currentBook:data})
   }
   console.log(state.currentBook)
   const { DataisLoaded, items } = state;
   if (!DataisLoaded) return <div>
     <h1 className='lfont'> Pleses wait some time.... </h1> </div>;
-if(state.currentBook!==-1&&state.currentBook!==undefined) return <BookPage data={state.currentBook}/>;
+if(state.currentBook!==-1&&state.currentBook!==undefined) return <BookPage data={state.currentBook.isbn[0]}/>;
 
 
   return (
